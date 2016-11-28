@@ -149,7 +149,7 @@ public class AngryBirds extends Panel implements Runnable, MouseListener, MouseM
     }
 
     // met le jeu dans une fenêtre
-    public static void main(String args[]) {
+    /*public static void main(String args[]) {
         Frame frame = new Frame("Oiseau pas content");
         final AngryBirds obj = new AngryBirds();
         frame.addWindowListener(new WindowAdapter() {
@@ -157,8 +157,9 @@ public class AngryBirds extends Panel implements Runnable, MouseListener, MouseM
                 System.exit(0);
             }
         });
+       
         frame.add(obj);
         frame.pack();
         frame.setVisible(true);
-    }
+    }*/
 }
