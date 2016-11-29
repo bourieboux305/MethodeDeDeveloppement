@@ -157,7 +157,7 @@ public class AngryBirds extends Panel implements Runnable, MouseListener, MouseM
                 System.exit(0);
             }
         });
-       
+       arg0
         frame.add(obj);
         frame.pack();
         frame.setVisible(true);

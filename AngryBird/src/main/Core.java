@@ -12,8 +12,11 @@ public class Core {
 
 	public static void main(String[] args) throws InterruptedException{
 		Birds bird=new BirdRed(100,400);
+		Pig pig=new Pig();
+		pig.radomPig();
 		Affichage aff=new Affichage(800,600);
 		aff.setBird(bird);
+		aff.setPig(pig);
 		Frame frame = new Frame("Oiseau pas content");
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent event) {
