@@ -46,7 +46,7 @@ public class Pig extends Panel {
 
 	public void radomPig(){
 		pigX=Math.random() * 500 + 200;
-		pigY=480;
+		pigY=500;
 	}
 	
 	

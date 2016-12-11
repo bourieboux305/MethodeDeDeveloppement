@@ -11,10 +11,14 @@ import java.io.*;
 public class Core {
 
 	public static void main(String[] args) throws InterruptedException{
-		Birds bird=new BirdRed(100,400);
+		Birds bird=new BirdJaune(100,420);
+		bird=new AntiGravitation(bird);
+		bird=new SpeedX2(bird);
 		Pig pig=new Pig();
 		pig.radomPig();
 		Affichage aff=new Affichage(800,600);
+		Environement env=new Environement();
+		aff.setEnv(env);
 		aff.setBird(bird);
 		aff.setPig(pig);
 		Frame frame = new Frame("Oiseau pas content");

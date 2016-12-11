@@ -11,6 +11,15 @@ public class Affichage extends Panel implements Runnable, MouseListener, MouseMo
 	public static Image buffer;
 	private Birds bird;
 	private Pig pig;
+	private Environement env;
+
+	public Environement getEnv() {
+		return env;
+	}
+
+	public void setEnv(Environement env) {
+		this.env = env;
+	}
 
 	public Birds getBird() {
 		return bird;
@@ -38,22 +47,12 @@ public class Affichage extends Panel implements Runnable, MouseListener, MouseMo
 		new Thread(this).start();
 	}
 	
-	public void backGround(Graphics2D g){
-		g.setColor(Color.white);
-        g.fillRect(0, 0, 800, 600);
-	}
-	
-	public void environment(Graphics2D g){
-		 g.setColor(Color.BLACK);
-	     g.drawLine(0, 500, 800, 500);
-	     g.drawLine(100, 500, 100, 400);
-	}
 	
 	public void paint(Graphics g2){
 		if(buffer == null) buffer = createImage(x, y);
         Graphics2D g = (Graphics2D) buffer.getGraphics();
-        this.backGround(g);
-        this.environment(g);
+        env.background(g);
+        env.ground(g);
         bird.affichage(g);
         pig.affichage(g);
 		g2.drawImage(buffer, 0, 0, null);
@@ -75,7 +74,7 @@ public class Affichage extends Panel implements Runnable, MouseListener, MouseMo
                 // redessine
             	if(!bird.isStop() && !bird.isSelecting()){
             		bird.deplacement(0.1);
-            		bird.crashGround();
+            		bird.crashGround(env);
             		bird.crashPig(pig);
             	}
                 repaint();
