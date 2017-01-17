@@ -1,33 +1,10 @@
 script:
 - echo "compilation bean.personne"
-- javac Noel/src/bean/Personne.java -d Noel/bin
-
-- echo "compilation bean.produit"
-- javac Noel/src/bean/Produit.java -d Noel/bin
-
-- echo "compilation bean.stock"
-- javac Noel/src/bean/Stock.java -d Noel/bin
-
-- echo "compilation bean.Commande"
-- javac Noel/src/bean/Commande.java -d Noel/bin
-
-- echo "compilation bean.pack"
-- javac Noel/src/bean/Packs.java -d Noel/bin
+- javac Noel/src/bean/*.java -d Noel/bin
 
 - echo "compilation DAO.daoCommande"
-- javac Noel/src/DAO/DaoCommande.java -d Noel/bin
-
-- echo "compilation DAO.Personne"
-- javac Noel/src/DAO/DaoPersonne.java -d Noel/bin
-
-- echo "compilation DAO.daoStock"
-- javac Noel/src/DAO/DaoStock.java -d Noel/bin
+- javac Noel/src/DAO/*.java -d Noel/bin
 
 - echo "compilation main.Core"
-- javac Noel/src/main/Core.java -d Noel/bin
+- javac Noel/src/main/*.java -d Noel/bin
 
-- echo "compilation main.CoreMain"
-- javac Noel/src/main/CoreMain.java -d Noel/bin
-
-- echo "compilation main.CoreManager"
-- javac Noel/src/main/CoreManager.java -d Noel/bin
